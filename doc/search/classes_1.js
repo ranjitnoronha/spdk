@@ -36,6 +36,7 @@ var searchData=
   ['spdk_5fnvme_5fctrlr_5fdata',['spdk_nvme_ctrlr_data',['../structspdk__nvme__ctrlr__data.html',1,'']]],
   ['spdk_5fnvme_5fctrlr_5flist',['spdk_nvme_ctrlr_list',['../structspdk__nvme__ctrlr__list.html',1,'']]],
   ['spdk_5fnvme_5fctrlr_5fopts',['spdk_nvme_ctrlr_opts',['../structspdk__nvme__ctrlr__opts.html',1,'']]],
+  ['spdk_5fnvme_5fdiscover_5finfo',['spdk_nvme_discover_info',['../structspdk__nvme__discover__info.html',1,'']]],
   ['spdk_5fnvme_5fdsm_5frange',['spdk_nvme_dsm_range',['../structspdk__nvme__dsm__range.html',1,'']]],
   ['spdk_5fnvme_5ferror_5finformation_5fentry',['spdk_nvme_error_information_entry',['../structspdk__nvme__error__information__entry.html',1,'']]],
   ['spdk_5fnvme_5ffirmware_5fpage',['spdk_nvme_firmware_page',['../structspdk__nvme__firmware__page.html',1,'']]],
