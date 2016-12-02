@@ -89,9 +89,9 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a638b489de11dd30ca050cdf0b3de3b17"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structspdk__pci__id.html">spdk_pci_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspdk__nvme__probe__info.html#a638b489de11dd30ca050cdf0b3de3b17">pci_id</a></td></tr>
 <tr class="memdesc:a638b489de11dd30ca050cdf0b3de3b17"><td class="mdescLeft">&#160;</td><td class="mdescRight">PCI device ID.  <a href="#a638b489de11dd30ca050cdf0b3de3b17">More...</a><br /></td></tr>
 <tr class="separator:a638b489de11dd30ca050cdf0b3de3b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0cd7daffdf7391bb0635cb0bf86e4c8"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspdk__nvme__probe__info.html#af0cd7daffdf7391bb0635cb0bf86e4c8">nqn</a> [SPDK_NVMF_NQN_MAX_LEN+1]</td></tr>
-<tr class="memdesc:af0cd7daffdf7391bb0635cb0bf86e4c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subsystem NQN.  <a href="#af0cd7daffdf7391bb0635cb0bf86e4c8">More...</a><br /></td></tr>
-<tr class="separator:af0cd7daffdf7391bb0635cb0bf86e4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31de53a9bde3fba8882e3080c7298064"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspdk__nvme__probe__info.html#a31de53a9bde3fba8882e3080c7298064">subnqn</a> [SPDK_NVMF_NQN_MAX_LEN+1]</td></tr>
+<tr class="memdesc:a31de53a9bde3fba8882e3080c7298064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subsystem NQN.  <a href="#a31de53a9bde3fba8882e3080c7298064">More...</a><br /></td></tr>
+<tr class="separator:a31de53a9bde3fba8882e3080c7298064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85e6498ab9288af0780c24b1ade9b49a"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="nvmf__spec_8h.html#a239e424a2438a066c30a288c592cba1b">spdk_nvmf_trtype</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspdk__nvme__probe__info.html#a85e6498ab9288af0780c24b1ade9b49a">trtype</a></td></tr>
 <tr class="memdesc:a85e6498ab9288af0780c24b1ade9b49a"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVMe over Fabrics transport type.  <a href="#a85e6498ab9288af0780c24b1ade9b49a">More...</a><br /></td></tr>
 <tr class="separator:a85e6498ab9288af0780c24b1ade9b49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,23 +105,6 @@ Data Fields</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>NVMe controller information provided during <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10" title="Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if des...">spdk_nvme_probe()</a>. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="af0cd7daffdf7391bb0635cb0bf86e4c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0cd7daffdf7391bb0635cb0bf86e4c8">&sect;&nbsp;</a></span>nqn</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char spdk_nvme_probe_info::nqn[SPDK_NVMF_NQN_MAX_LEN+1]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Subsystem NQN. </p>
-<p>If this is not an NVMe over Fabrics controller, this field will be a zero-length string. </p>
-
-</div>
-</div>
 <a id="a49c0d18a409e2f724b33ff0a38b5b682"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49c0d18a409e2f724b33ff0a38b5b682">&sect;&nbsp;</a></span>pci_addr</h2>
 
@@ -153,6 +136,23 @@ Data Fields</h2></td></tr>
 
 <p>PCI device ID. </p>
 <p>If not available, each field will be filled with all 0xFs. </p>
+
+</div>
+</div>
+<a id="a31de53a9bde3fba8882e3080c7298064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31de53a9bde3fba8882e3080c7298064">&sect;&nbsp;</a></span>subnqn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char spdk_nvme_probe_info::subnqn[SPDK_NVMF_NQN_MAX_LEN+1]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subsystem NQN. </p>
+<p>If this is not an NVMe over Fabrics controller, this field will be a zero-length string. </p>
 
 </div>
 </div>

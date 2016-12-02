@@ -93,15 +93,35 @@ enum <a class="el" href="nvme__spec_8h.html#a7e72566466cae734d999e755524f7b20">s
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspdk__nvme__ctrlr__opts.html#ae2a14526f5856e3830b08994675841d8">transport_retry_count</a></td></tr>
 <tr class="memdesc:ae2a14526f5856e3830b08994675841d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the retry number when there is issue with the transport. <br /></td></tr>
 <tr class="separator:ae2a14526f5856e3830b08994675841d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca447b4c0050e446c0ac3c52f749ddaf"><td class="memItemLeft" align="right" valign="top"><a id="aca447b4c0050e446c0ac3c52f749ddaf"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspdk__nvme__ctrlr__opts.html#aca447b4c0050e446c0ac3c52f749ddaf">queue_size</a></td></tr>
-<tr class="memdesc:aca447b4c0050e446c0ac3c52f749ddaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The queue depth of each NVMe I/O queue. <br /></td></tr>
-<tr class="separator:aca447b4c0050e446c0ac3c52f749ddaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352ff38778e32757885c5ce87d3199e4"><td class="memItemLeft" align="right" valign="top"><a id="a352ff38778e32757885c5ce87d3199e4"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspdk__nvme__ctrlr__opts.html#a352ff38778e32757885c5ce87d3199e4">queue_size</a></td></tr>
+<tr class="memdesc:a352ff38778e32757885c5ce87d3199e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The queue depth of each NVMe I/O queue. <br /></td></tr>
+<tr class="separator:a352ff38778e32757885c5ce87d3199e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d3f0640a4c302aa3ff11544aa6a428"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspdk__nvme__ctrlr__opts.html#a39d3f0640a4c302aa3ff11544aa6a428">hostnqn</a> [SPDK_NVMF_NQN_MAX_LEN+1]</td></tr>
+<tr class="memdesc:a39d3f0640a4c302aa3ff11544aa6a428"><td class="mdescLeft">&#160;</td><td class="mdescRight">The host NQN to use when connecting to NVMe over Fabrics controllers.  <a href="#a39d3f0640a4c302aa3ff11544aa6a428">More...</a><br /></td></tr>
+<tr class="separator:a39d3f0640a4c302aa3ff11544aa6a428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>NVMe controller initialization options. </p>
 <p>A pointer to this structure will be provided for each probe callback from <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10" title="Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if des...">spdk_nvme_probe()</a> to allow the user to request non-default options, and the actual options enabled on the controller will be provided during the attach callback. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
+<a id="a39d3f0640a4c302aa3ff11544aa6a428"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d3f0640a4c302aa3ff11544aa6a428">&sect;&nbsp;</a></span>hostnqn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char spdk_nvme_ctrlr_opts::hostnqn[SPDK_NVMF_NQN_MAX_LEN+1]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The host NQN to use when connecting to NVMe over Fabrics controllers. </p>
+<p>Unused for local PCIe-attached NVMe devices. </p>
+
+</div>
+</div>
 <a id="a2510f057d069ab99a00bfa9b747037b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2510f057d069ab99a00bfa9b747037b0">&sect;&nbsp;</a></span>keep_alive_timeout_ms</h2>
 
