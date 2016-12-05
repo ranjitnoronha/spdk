@@ -384,6 +384,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
 </div><div class="memdoc">
 
 <p>Callback for <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10" title="Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if des...">spdk_nvme_probe()</a> to report that a device attached to the userspace NVMe driver has been removed from the system. </p>
+<p>The controller will remain in a failed state (any new I/O submitted will fail).</p>
+<p>The controller must be detached from the userspace driver by calling <a class="el" href="nvme_8h.html#a4b63c225c3cce6da60fdbfb6f54b11e2" title="Detaches specified device returned by spdk_nvme_probe()&#39;s attach_cb from the NVMe driver...">spdk_nvme_detach()</a> once the controller is no longer in use. It is up to the library user to ensure that no other threads are using the controller before calling <a class="el" href="nvme_8h.html#a4b63c225c3cce6da60fdbfb6f54b11e2" title="Detaches specified device returned by spdk_nvme_probe()&#39;s attach_cb from the NVMe driver...">spdk_nvme_detach()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ctrlr</td><td>NVMe controller instance that was removed. </td></tr>
