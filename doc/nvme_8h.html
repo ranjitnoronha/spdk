@@ -84,8 +84,8 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspdk__nvme__ctrlr__opts.html">spdk_nvme_ctrlr_opts</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVMe controller initialization options.  <a href="structspdk__nvme__ctrlr__opts.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspdk__nvme__discover__info.html">spdk_nvme_discover_info</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVMe over Fabrics discovery parameters.  <a href="structspdk__nvme__discover__info.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspdk__nvme__transport__id.html">spdk_nvme_transport_id</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVMe transport identifier.  <a href="structspdk__nvme__transport__id.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspdk__nvme__probe__info.html">spdk_nvme_probe_info</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVMe controller information provided during <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10" title="Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if des...">spdk_nvme_probe()</a>.  <a href="structspdk__nvme__probe__info.html#details">More...</a><br /></td></tr>
@@ -117,6 +117,11 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:ae87a03c28984a2c0499d50ef5e9d0ece"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#ae87a03c28984a2c0499d50ef5e9d0ece">spdk_nvme_transport_type</a> { <a class="el" href="nvme_8h.html#ae87a03c28984a2c0499d50ef5e9d0ecea162afc05d1ae756b8a7969be140035ea">SPDK_NVME_TRANSPORT_PCIE</a> = 256, 
+<a class="el" href="nvme_8h.html#ae87a03c28984a2c0499d50ef5e9d0ecea140f1cb4edf258bddffeb1c7277d93d8">SPDK_NVME_TRANSPORT_RDMA</a> = SPDK_NVMF_TRTYPE_RDMA
+ }<tr class="memdesc:ae87a03c28984a2c0499d50ef5e9d0ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVMe library transports.  <a href="nvme_8h.html#ae87a03c28984a2c0499d50ef5e9d0ece">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ae87a03c28984a2c0499d50ef5e9d0ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a018f3b986b4345ee0c6931be9718c163"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a018f3b986b4345ee0c6931be9718c163">spdk_nvme_ns_flags</a> { <br />
 &#160;&#160;<a class="el" href="nvme_8h.html#a018f3b986b4345ee0c6931be9718c163a80dcd48a57fa9e14efba4757300ad729">SPDK_NVME_NS_DEALLOCATE_SUPPORTED</a> = 0x1, 
 <a class="el" href="nvme_8h.html#a018f3b986b4345ee0c6931be9718c163ad403aafc70c00560a1db768029933400">SPDK_NVME_NS_FLUSH_SUPPORTED</a> = 0x2, 
@@ -132,12 +137,12 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a64996f26ee3182bb3d40fb9d7728a5a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a64996f26ee3182bb3d40fb9d7728a5a0">spdk_nvme_transport_available</a> (enum <a class="el" href="nvmf__spec_8h.html#a239e424a2438a066c30a288c592cba1b">spdk_nvmf_trtype</a> trtype)</td></tr>
-<tr class="memdesc:a64996f26ee3182bb3d40fb9d7728a5a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the NVMe library can handle a specific NVMe over Fabrics transport type.  <a href="#a64996f26ee3182bb3d40fb9d7728a5a0">More...</a><br /></td></tr>
-<tr class="separator:a64996f26ee3182bb3d40fb9d7728a5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a429214b777477c2bc7e3ca565ef331fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a429214b777477c2bc7e3ca565ef331fa">spdk_nvme_discover</a> (const struct <a class="el" href="structspdk__nvme__discover__info.html">spdk_nvme_discover_info</a> *info, void *cb_ctx, <a class="el" href="nvme_8h.html#a2102de2308a17d698bfe36c604bebf0e">spdk_nvme_probe_cb</a> probe_cb, <a class="el" href="nvme_8h.html#a14fb44100c10d071378ab19cf3e99d76">spdk_nvme_attach_cb</a> attach_cb, <a class="el" href="nvme_8h.html#a05f1aa545be57a03bb2dd0c6180172b6">spdk_nvme_remove_cb</a> remove_cb)</td></tr>
-<tr class="memdesc:a429214b777477c2bc7e3ca565ef331fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">discover the remote Controller via NVMe over fabrics protocol  <a href="#a429214b777477c2bc7e3ca565ef331fa">More...</a><br /></td></tr>
-<tr class="separator:a429214b777477c2bc7e3ca565ef331fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5735e7600f79c45871b3dc3adb292f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#ab5735e7600f79c45871b3dc3adb292f2">spdk_nvme_transport_available</a> (enum <a class="el" href="nvme_8h.html#ae87a03c28984a2c0499d50ef5e9d0ece">spdk_nvme_transport_type</a> trtype)</td></tr>
+<tr class="memdesc:ab5735e7600f79c45871b3dc3adb292f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the NVMe library can handle a specific NVMe over Fabrics transport type.  <a href="#ab5735e7600f79c45871b3dc3adb292f2">More...</a><br /></td></tr>
+<tr class="separator:ab5735e7600f79c45871b3dc3adb292f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fd0941c7f681db753382131f85d8f91"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a2fd0941c7f681db753382131f85d8f91">spdk_nvme_discover</a> (const struct <a class="el" href="structspdk__nvme__transport__id.html">spdk_nvme_transport_id</a> *trid, void *cb_ctx, <a class="el" href="nvme_8h.html#a2102de2308a17d698bfe36c604bebf0e">spdk_nvme_probe_cb</a> probe_cb, <a class="el" href="nvme_8h.html#a14fb44100c10d071378ab19cf3e99d76">spdk_nvme_attach_cb</a> attach_cb, <a class="el" href="nvme_8h.html#a05f1aa545be57a03bb2dd0c6180172b6">spdk_nvme_remove_cb</a> remove_cb)</td></tr>
+<tr class="memdesc:a2fd0941c7f681db753382131f85d8f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a device discovery using the discovery service specified by trid.  <a href="#a2fd0941c7f681db753382131f85d8f91">More...</a><br /></td></tr>
+<tr class="separator:a2fd0941c7f681db753382131f85d8f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac7ac5fe93429cfa45676d2dc6af5c10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10">spdk_nvme_probe</a> (void *cb_ctx, <a class="el" href="nvme_8h.html#a2102de2308a17d698bfe36c604bebf0e">spdk_nvme_probe_cb</a> probe_cb, <a class="el" href="nvme_8h.html#a14fb44100c10d071378ab19cf3e99d76">spdk_nvme_attach_cb</a> attach_cb, <a class="el" href="nvme_8h.html#a05f1aa545be57a03bb2dd0c6180172b6">spdk_nvme_remove_cb</a> remove_cb)</td></tr>
 <tr class="memdesc:aac7ac5fe93429cfa45676d2dc6af5c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if desired.  <a href="#aac7ac5fe93429cfa45676d2dc6af5c10">More...</a><br /></td></tr>
 <tr class="separator:aac7ac5fe93429cfa45676d2dc6af5c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -455,6 +460,30 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
 <tr><td class="fieldname"><a id="a018f3b986b4345ee0c6931be9718c163afe158b050528f0f3341e5af3129c61a7"></a>SPDK_NVME_NS_DPS_PI_SUPPORTED&#160;</td><td class="fielddoc"><p>The end-to-end data protection is supported. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a018f3b986b4345ee0c6931be9718c163a91203896ead47bbe22e9f7db8a63c14f"></a>SPDK_NVME_NS_EXTENDED_LBA_SUPPORTED&#160;</td><td class="fielddoc"><p>The extended lba format is supported, metadata is transferred as a contiguous part of the logical block that it is associated with. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ae87a03c28984a2c0499d50ef5e9d0ece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae87a03c28984a2c0499d50ef5e9d0ece">&sect;&nbsp;</a></span>spdk_nvme_transport_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="nvme_8h.html#ae87a03c28984a2c0499d50ef5e9d0ece">spdk_nvme_transport_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>NVMe library transports. </p>
+<p>NOTE: These are mapped directly to the NVMe over Fabrics TRTYPE values, except for PCIe, which is a special case since NVMe over Fabrics does not define a TRTYPE for local PCIe.</p>
+<p>Currently, this uses 256 for PCIe which is intentionally outside of the 8-bit range of TRTYPE. If the NVMe-oF specification ever defines a PCIe TRTYPE, this should be updated. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae87a03c28984a2c0499d50ef5e9d0ecea162afc05d1ae756b8a7969be140035ea"></a>SPDK_NVME_TRANSPORT_PCIE&#160;</td><td class="fielddoc"><p>PCIe Transport (locally attached devices) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae87a03c28984a2c0499d50ef5e9d0ecea140f1cb4edf258bddffeb1c7277d93d8"></a>SPDK_NVME_TRANSPORT_RDMA&#160;</td><td class="fielddoc"><p>RDMA Transport (RoCE, iWARP, etc.) </p>
 </td></tr>
 </table>
 
@@ -1334,8 +1363,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
 
 </div>
 </div>
-<a id="a429214b777477c2bc7e3ca565ef331fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a429214b777477c2bc7e3ca565ef331fa">&sect;&nbsp;</a></span>spdk_nvme_discover()</h2>
+<a id="a2fd0941c7f681db753382131f85d8f91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fd0941c7f681db753382131f85d8f91">&sect;&nbsp;</a></span>spdk_nvme_discover()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1343,8 +1372,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
         <tr>
           <td class="memname">int spdk_nvme_discover </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structspdk__nvme__discover__info.html">spdk_nvme_discover_info</a> *&#160;</td>
-          <td class="paramname"><em>info</em>, </td>
+          <td class="paramtype">const struct <a class="el" href="structspdk__nvme__transport__id.html">spdk_nvme_transport_id</a> *&#160;</td>
+          <td class="paramname"><em>trid</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1378,11 +1407,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
       </table>
 </div><div class="memdoc">
 
-<p>discover the remote Controller via NVMe over fabrics protocol </p>
+<p>Perform a device discovery using the discovery service specified by trid. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">trid</td><td>The address of the discovery service on which to perform the discovery. </td></tr>
     <tr><td class="paramname">cb_ctx</td><td>Opaque value which will be passed back in cb_ctx parameter of the callbacks. </td></tr>
-    <tr><td class="paramname">info</td><td>which specifies the info used to discover the NVMe over fabrics target. </td></tr>
     <tr><td class="paramname">probe_cb</td><td>will be called once per NVMe device found in the system. </td></tr>
     <tr><td class="paramname">attach_cb</td><td>will be called for devices for which probe_cb returned true once that NVMe controller has been attached to the userspace driver. </td></tr>
     <tr><td class="paramname">remove_cb</td><td>will be called for devices that were attached in a previous <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10" title="Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if des...">spdk_nvme_probe()</a> call but are no longer attached to the system. Optional; specify NULL if removal notices are not desired. </td></tr>
@@ -2777,8 +2806,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
 
 </div>
 </div>
-<a id="a64996f26ee3182bb3d40fb9d7728a5a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64996f26ee3182bb3d40fb9d7728a5a0">&sect;&nbsp;</a></span>spdk_nvme_transport_available()</h2>
+<a id="ab5735e7600f79c45871b3dc3adb292f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5735e7600f79c45871b3dc3adb292f2">&sect;&nbsp;</a></span>spdk_nvme_transport_available()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2786,7 +2815,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
         <tr>
           <td class="memname">bool spdk_nvme_transport_available </td>
           <td>(</td>
-          <td class="paramtype">enum <a class="el" href="nvmf__spec_8h.html#a239e424a2438a066c30a288c592cba1b">spdk_nvmf_trtype</a>&#160;</td>
+          <td class="paramtype">enum <a class="el" href="nvme_8h.html#ae87a03c28984a2c0499d50ef5e9d0ece">spdk_nvme_transport_type</a>&#160;</td>
           <td class="paramname"><em>trtype</em></td><td>)</td>
           <td></td>
         </tr>
