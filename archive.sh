@@ -27,16 +27,17 @@ if [ ! -d $doc ]; then
         exit 1
 fi
 
-if [ -d doc/$archive_dir ]; then
-        echo "doc/$archive_dir already exists - updating..."
-        git rm -rf -- doc/$archive_dir
+if [ -d $archive_dir/doc ]; then
+        echo "$archive_dir/doc already exists - updating..."
+        git rm -rf -- $archive_dir/doc
 fi
 (cd $doc; make clean; make)
-cp -R $doc/output/html doc/$archive_dir
-git add -- doc/$archive_dir
+mkdir -p $archive_dir/doc
+cp -R $doc/output/html $archive_dir/doc
+git add -- $archive_dir/doc
 (cd $doc; make clean)
 
 echo
-echo "New doc archive generated in doc/$archive_dir"
+echo "New doc archive generated in $archive_dir/doc"
 echo
 git status
