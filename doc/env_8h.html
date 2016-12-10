@@ -169,6 +169,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="env_
 <tr class="memitem:a96187c4c0c5a302669f684e487ebaa0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="env_8h.html#a96187c4c0c5a302669f684e487ebaa0d">spdk_pci_addr_parse</a> (struct <a class="el" href="structspdk__pci__addr.html">spdk_pci_addr</a> *addr, const char *bdf)</td></tr>
 <tr class="memdesc:a96187c4c0c5a302669f684e487ebaa0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string representation of a PCI address into a struct <a class="el" href="structspdk__pci__addr.html">spdk_pci_addr</a>.  <a href="#a96187c4c0c5a302669f684e487ebaa0d">More...</a><br /></td></tr>
 <tr class="separator:a96187c4c0c5a302669f684e487ebaa0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492c0520e80d8be841891e4d1bd7a446"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="env_8h.html#a492c0520e80d8be841891e4d1bd7a446">spdk_pci_addr_fmt</a> (char *bdf, size_t sz, const struct <a class="el" href="structspdk__pci__addr.html">spdk_pci_addr</a> *addr)</td></tr>
+<tr class="memdesc:a492c0520e80d8be841891e4d1bd7a446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a struct <a class="el" href="structspdk__pci__addr.html">spdk_pci_addr</a> to a string.  <a href="#a492c0520e80d8be841891e4d1bd7a446">More...</a><br /></td></tr>
+<tr class="separator:a492c0520e80d8be841891e4d1bd7a446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abafaea6fc34059237e54e0ab254d0f28"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="env_8h.html#abafaea6fc34059237e54e0ab254d0f28">spdk_call_unaffinitized</a> (void *cb(void *arg), void *arg)</td></tr>
 <tr class="memdesc:abafaea6fc34059237e54e0ab254d0f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call a function with CPU affinity unset.  <a href="#abafaea6fc34059237e54e0ab254d0f28">More...</a><br /></td></tr>
 <tr class="separator:abafaea6fc34059237e54e0ab254d0f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -392,6 +395,51 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="env_
 
 <p>Compare two PCI addresses. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 if a1 == a2, less than 0 if a1 &lt; a2, greater than 0 if a1 &gt; a2 </dd></dl>
+
+</div>
+</div>
+<a id="a492c0520e80d8be841891e4d1bd7a446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a492c0520e80d8be841891e4d1bd7a446">&sect;&nbsp;</a></span>spdk_pci_addr_fmt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int spdk_pci_addr_fmt </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>bdf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>sz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structspdk__pci__addr.html">spdk_pci_addr</a> *&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert a struct <a class="el" href="structspdk__pci__addr.html">spdk_pci_addr</a> to a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bdf</td><td>String into which a string will be output in the format domain:bus:device.function. The string must be at least 14 characters in size. </td></tr>
+    <tr><td class="paramname">sz</td><td>Size of bdf. Must be at least 14. </td></tr>
+    <tr><td class="paramname">addr</td><td>PCI address input</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, or a negated errno value on failure. </dd></dl>
 
 </div>
 </div>
