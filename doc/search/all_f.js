@@ -1,8 +1,6 @@
 var searchData=
 [
   ['parent',['parent',['../structspdk__bdev__io.html#abcd367e4223310572d4a79d140ddfac9',1,'spdk_bdev_io']]],
-  ['pci_5faddr',['pci_addr',['../structspdk__nvme__probe__info.html#a49c0d18a409e2f724b33ff0a38b5b682',1,'spdk_nvme_probe_info']]],
-  ['pci_5fid',['pci_id',['../structspdk__nvme__probe__info.html#a638b489de11dd30ca050cdf0b3de3b17',1,'spdk_nvme_probe_info']]],
   ['pci_5fids_2eh',['pci_ids.h',['../pci__ids_8h.html',1,'']]],
   ['persist',['persist',['../structspdk__nvme__ns__data.html#ada850d5cd15ecc2d5f216b845bd5c3e8',1,'spdk_nvme_ns_data']]],
   ['pit',['pit',['../structspdk__nvme__ns__data.html#ac13a2b9435ad685be10f79affa76b821',1,'spdk_nvme_ns_data']]],
