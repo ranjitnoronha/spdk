@@ -156,6 +156,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a5a9daf15b5008ac36c12e7b8db7bdec9"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structspdk__nvme__ctrlr__data.html">spdk_nvme_ctrlr_data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a5a9daf15b5008ac36c12e7b8db7bdec9">spdk_nvme_ctrlr_get_data</a> (struct spdk_nvme_ctrlr *ctrlr)</td></tr>
 <tr class="memdesc:a5a9daf15b5008ac36c12e7b8db7bdec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the identify controller data as defined by the NVMe specification.  <a href="#a5a9daf15b5008ac36c12e7b8db7bdec9">More...</a><br /></td></tr>
 <tr class="separator:a5a9daf15b5008ac36c12e7b8db7bdec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46348531c83fd61acad1a55236d7d576"><td class="memItemLeft" align="right" valign="top"><a id="a46348531c83fd61acad1a55236d7d576"></a>
+union <a class="el" href="unionspdk__nvme__csts__register.html">spdk_nvme_csts_register</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a46348531c83fd61acad1a55236d7d576">spdk_nvme_ctrlr_get_regs_csts</a> (struct spdk_nvme_ctrlr *ctrlr)</td></tr>
+<tr class="memdesc:a46348531c83fd61acad1a55236d7d576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the NVMe controller CSTS (Status) register. <br /></td></tr>
+<tr class="separator:a46348531c83fd61acad1a55236d7d576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6943191f9c88c3cec504f87672b9acf8"><td class="memItemLeft" align="right" valign="top"><a id="a6943191f9c88c3cec504f87672b9acf8"></a>
 union <a class="el" href="unionspdk__nvme__cap__register.html">spdk_nvme_cap_register</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a6943191f9c88c3cec504f87672b9acf8">spdk_nvme_ctrlr_get_regs_cap</a> (struct spdk_nvme_ctrlr *ctrlr)</td></tr>
 <tr class="memdesc:a6943191f9c88c3cec504f87672b9acf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the NVMe controller CAP (Capabilities) register. <br /></td></tr>
@@ -198,9 +202,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
 <tr class="memitem:a6f01fb8a5f404e41e6fa224a7942be08"><td class="memItemLeft" align="right" valign="top">struct spdk_nvme_ns *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a6f01fb8a5f404e41e6fa224a7942be08">spdk_nvme_ctrlr_get_ns</a> (struct spdk_nvme_ctrlr *ctrlr, uint32_t ns_id)</td></tr>
 <tr class="memdesc:a6f01fb8a5f404e41e6fa224a7942be08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a handle to a namespace for the given controller.  <a href="#a6f01fb8a5f404e41e6fa224a7942be08">More...</a><br /></td></tr>
 <tr class="separator:a6f01fb8a5f404e41e6fa224a7942be08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02dd5dad43a425f0b8985cd7cf78ac6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a02dd5dad43a425f0b8985cd7cf78ac6e">spdk_nvme_ctrlr_cmd_get_log_page</a> (struct spdk_nvme_ctrlr *ctrlr, uint8_t log_page, uint32_t nsid, void *payload, uint32_t payload_size, <a class="el" href="nvme_8h.html#ac9779e9957d7089dde8e492cc60856d8">spdk_nvme_cmd_cb</a> cb_fn, void *cb_arg)</td></tr>
-<tr class="memdesc:a02dd5dad43a425f0b8985cd7cf78ac6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a specific log page from the NVMe controller.  <a href="#a02dd5dad43a425f0b8985cd7cf78ac6e">More...</a><br /></td></tr>
-<tr class="separator:a02dd5dad43a425f0b8985cd7cf78ac6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c881cccf7873bbe4605320ffb0a81c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a88c881cccf7873bbe4605320ffb0a81c">spdk_nvme_ctrlr_cmd_get_log_page</a> (struct spdk_nvme_ctrlr *ctrlr, uint8_t log_page, uint32_t nsid, void *payload, uint32_t payload_size, uint64_t offset, <a class="el" href="nvme_8h.html#ac9779e9957d7089dde8e492cc60856d8">spdk_nvme_cmd_cb</a> cb_fn, void *cb_arg)</td></tr>
+<tr class="memdesc:a88c881cccf7873bbe4605320ffb0a81c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a specific log page from the NVMe controller.  <a href="#a88c881cccf7873bbe4605320ffb0a81c">More...</a><br /></td></tr>
+<tr class="separator:a88c881cccf7873bbe4605320ffb0a81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9507cb98ee30e5df98474bc82190476"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#aa9507cb98ee30e5df98474bc82190476">spdk_nvme_ctrlr_cmd_set_feature</a> (struct spdk_nvme_ctrlr *ctrlr, uint8_t feature, uint32_t cdw11, uint32_t cdw12, void *payload, uint32_t payload_size, <a class="el" href="nvme_8h.html#ac9779e9957d7089dde8e492cc60856d8">spdk_nvme_cmd_cb</a> cb_fn, void *cb_arg)</td></tr>
 <tr class="memdesc:aa9507cb98ee30e5df98474bc82190476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set specific feature for the given NVMe controller.  <a href="#aa9507cb98ee30e5df98474bc82190476">More...</a><br /></td></tr>
 <tr class="separator:aa9507cb98ee30e5df98474bc82190476"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -713,8 +717,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
 
 </div>
 </div>
-<a id="a02dd5dad43a425f0b8985cd7cf78ac6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02dd5dad43a425f0b8985cd7cf78ac6e">&sect;&nbsp;</a></span>spdk_nvme_ctrlr_cmd_get_log_page()</h2>
+<a id="a88c881cccf7873bbe4605320ffb0a81c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c881cccf7873bbe4605320ffb0a81c">&sect;&nbsp;</a></span>spdk_nvme_ctrlr_cmd_get_log_page()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -752,6 +756,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="nvme_8h.html#ac9779e9957d7089dde8e492cc60856d8">spdk_nvme_cmd_cb</a>&#160;</td>
           <td class="paramname"><em>cb_fn</em>, </td>
         </tr>
@@ -777,6 +787,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
     <tr><td class="paramname">nsid</td><td>Depending on the log page, this may be 0, a namespace identifier, or SPDK_NVME_GLOBAL_NS_TAG. </td></tr>
     <tr><td class="paramname">payload</td><td>The pointer to the payload buffer. </td></tr>
     <tr><td class="paramname">payload_size</td><td>The size of payload buffer. </td></tr>
+    <tr><td class="paramname">offset</td><td>Offset in bytes within the log page to start retrieving log page data. May only be non-zero if the controller supports extended data for Get Log Page as reported in the controller data log page attributes. </td></tr>
     <tr><td class="paramname">cb_fn</td><td>Callback function to invoke when the log page has been retrieved. </td></tr>
     <tr><td class="paramname">cb_arg</td><td>Argument to pass to the callback function.</td></tr>
   </table>
@@ -1243,7 +1254,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
 
 <p>Determine if a particular log page is supported by the given NVMe controller. </p>
 <p>This function is thread safe and can be called at any point while the controller is attached to the SPDK NVMe driver.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="nvme_8h.html#a02dd5dad43a425f0b8985cd7cf78ac6e" title="Get a specific log page from the NVMe controller. ">spdk_nvme_ctrlr_cmd_get_log_page()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="nvme_8h.html#a88c881cccf7873bbe4605320ffb0a81c" title="Get a specific log page from the NVMe controller. ">spdk_nvme_ctrlr_cmd_get_log_page()</a> </dd></dl>
 
 </div>
 </div>

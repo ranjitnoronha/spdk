@@ -5,6 +5,7 @@ var searchData=
   ['ieee',['ieee',['../structspdk__nvme__ctrlr__data.html#a5b9650f02ffc24e94a6708b33272c415',1,'spdk_nvme_ctrlr_data']]],
   ['io_5fchannel',['io_channel',['../structspdk__scsi__lun.html#a6921353d1f30e355b09325e6b0dcc4c9',1,'spdk_scsi_lun']]],
   ['io_5fchannel_2eh',['io_channel.h',['../io__channel_8h.html',1,'']]],
+  ['io_5fqueue_5fsize',['io_queue_size',['../structspdk__nvme__ctrlr__opts.html#a1c91126df78ac91d651dfcdc5236332b',1,'spdk_nvme_ctrlr_opts']]],
   ['i_2foat_20driver',['I/OAT Driver',['../ioat.html',1,'']]],
   ['ioat_2eh',['ioat.h',['../ioat_8h.html',1,'']]],
   ['ioat_5fspec_2eh',['ioat_spec.h',['../ioat__spec_8h.html',1,'']]],
