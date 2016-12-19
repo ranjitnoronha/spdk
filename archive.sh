@@ -32,7 +32,7 @@ if [ -d $archive_dir/doc ]; then
         git rm -rf -- $archive_dir/doc
 fi
 (cd $doc; make clean; make)
-mkdir -p $archive_dir/doc
+mkdir -p $archive_dir
 cp -R $doc/output/html $archive_dir/doc
 git add -- $archive_dir/doc
 (cd $doc; make clean)
