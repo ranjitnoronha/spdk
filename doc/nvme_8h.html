@@ -91,13 +91,13 @@ Data Structures</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a95f40d5179f8424b466a30ba0610ab4c"><td class="memItemLeft" align="right" valign="top">typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a95f40d5179f8424b466a30ba0610ab4c">spdk_nvme_probe_cb</a>) (void *cb_ctx, const struct <a class="el" href="structspdk__nvme__transport__id.html">spdk_nvme_transport_id</a> *trid, struct <a class="el" href="structspdk__nvme__ctrlr__opts.html">spdk_nvme_ctrlr_opts</a> *opts)</td></tr>
-<tr class="memdesc:a95f40d5179f8424b466a30ba0610ab4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10" title="Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if des...">spdk_nvme_probe()</a> enumeration.  <a href="#a95f40d5179f8424b466a30ba0610ab4c">More...</a><br /></td></tr>
+<tr class="memdesc:a95f40d5179f8424b466a30ba0610ab4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for <a class="el" href="nvme_8h.html#a225bbc386ec518ae21bd5536f21db45d" title="Enumerate the bus indicated by the transport ID and attach the userspace NVMe driver to each device f...">spdk_nvme_probe()</a> enumeration.  <a href="#a95f40d5179f8424b466a30ba0610ab4c">More...</a><br /></td></tr>
 <tr class="separator:a95f40d5179f8424b466a30ba0610ab4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1eaa795f075495337b270667661ce5d"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#ac1eaa795f075495337b270667661ce5d">spdk_nvme_attach_cb</a>) (void *cb_ctx, const struct <a class="el" href="structspdk__nvme__transport__id.html">spdk_nvme_transport_id</a> *trid, struct spdk_nvme_ctrlr *ctrlr, const struct <a class="el" href="structspdk__nvme__ctrlr__opts.html">spdk_nvme_ctrlr_opts</a> *opts)</td></tr>
-<tr class="memdesc:ac1eaa795f075495337b270667661ce5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10" title="Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if des...">spdk_nvme_probe()</a> to report a device that has been attached to the userspace NVMe driver.  <a href="#ac1eaa795f075495337b270667661ce5d">More...</a><br /></td></tr>
+<tr class="memdesc:ac1eaa795f075495337b270667661ce5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for <a class="el" href="nvme_8h.html#a225bbc386ec518ae21bd5536f21db45d" title="Enumerate the bus indicated by the transport ID and attach the userspace NVMe driver to each device f...">spdk_nvme_probe()</a> to report a device that has been attached to the userspace NVMe driver.  <a href="#ac1eaa795f075495337b270667661ce5d">More...</a><br /></td></tr>
 <tr class="separator:ac1eaa795f075495337b270667661ce5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05f1aa545be57a03bb2dd0c6180172b6"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a05f1aa545be57a03bb2dd0c6180172b6">spdk_nvme_remove_cb</a>) (void *cb_ctx, struct spdk_nvme_ctrlr *ctrlr)</td></tr>
-<tr class="memdesc:a05f1aa545be57a03bb2dd0c6180172b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10" title="Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if des...">spdk_nvme_probe()</a> to report that a device attached to the userspace NVMe driver has been removed from the system.  <a href="#a05f1aa545be57a03bb2dd0c6180172b6">More...</a><br /></td></tr>
+<tr class="memdesc:a05f1aa545be57a03bb2dd0c6180172b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for <a class="el" href="nvme_8h.html#a225bbc386ec518ae21bd5536f21db45d" title="Enumerate the bus indicated by the transport ID and attach the userspace NVMe driver to each device f...">spdk_nvme_probe()</a> to report that a device attached to the userspace NVMe driver has been removed from the system.  <a href="#a05f1aa545be57a03bb2dd0c6180172b6">More...</a><br /></td></tr>
 <tr class="separator:a05f1aa545be57a03bb2dd0c6180172b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9779e9957d7089dde8e492cc60856d8"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#ac9779e9957d7089dde8e492cc60856d8">spdk_nvme_cmd_cb</a>) (void *, const struct <a class="el" href="structspdk__nvme__cpl.html">spdk_nvme_cpl</a> *)</td></tr>
 <tr class="memdesc:ac9779e9957d7089dde8e492cc60856d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature for callback function invoked when a command is completed.  <a href="#ac9779e9957d7089dde8e492cc60856d8">More...</a><br /></td></tr>
@@ -141,14 +141,11 @@ Functions</h2></td></tr>
 <tr class="memitem:ab5735e7600f79c45871b3dc3adb292f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#ab5735e7600f79c45871b3dc3adb292f2">spdk_nvme_transport_available</a> (enum <a class="el" href="nvme_8h.html#ae87a03c28984a2c0499d50ef5e9d0ece">spdk_nvme_transport_type</a> trtype)</td></tr>
 <tr class="memdesc:ab5735e7600f79c45871b3dc3adb292f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the NVMe library can handle a specific NVMe over Fabrics transport type.  <a href="#ab5735e7600f79c45871b3dc3adb292f2">More...</a><br /></td></tr>
 <tr class="separator:ab5735e7600f79c45871b3dc3adb292f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fd0941c7f681db753382131f85d8f91"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a2fd0941c7f681db753382131f85d8f91">spdk_nvme_discover</a> (const struct <a class="el" href="structspdk__nvme__transport__id.html">spdk_nvme_transport_id</a> *trid, void *cb_ctx, <a class="el" href="nvme_8h.html#a95f40d5179f8424b466a30ba0610ab4c">spdk_nvme_probe_cb</a> probe_cb, <a class="el" href="nvme_8h.html#ac1eaa795f075495337b270667661ce5d">spdk_nvme_attach_cb</a> attach_cb, <a class="el" href="nvme_8h.html#a05f1aa545be57a03bb2dd0c6180172b6">spdk_nvme_remove_cb</a> remove_cb)</td></tr>
-<tr class="memdesc:a2fd0941c7f681db753382131f85d8f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a device discovery using the discovery service specified by trid.  <a href="#a2fd0941c7f681db753382131f85d8f91">More...</a><br /></td></tr>
-<tr class="separator:a2fd0941c7f681db753382131f85d8f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac7ac5fe93429cfa45676d2dc6af5c10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10">spdk_nvme_probe</a> (void *cb_ctx, <a class="el" href="nvme_8h.html#a95f40d5179f8424b466a30ba0610ab4c">spdk_nvme_probe_cb</a> probe_cb, <a class="el" href="nvme_8h.html#ac1eaa795f075495337b270667661ce5d">spdk_nvme_attach_cb</a> attach_cb, <a class="el" href="nvme_8h.html#a05f1aa545be57a03bb2dd0c6180172b6">spdk_nvme_remove_cb</a> remove_cb)</td></tr>
-<tr class="memdesc:aac7ac5fe93429cfa45676d2dc6af5c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if desired.  <a href="#aac7ac5fe93429cfa45676d2dc6af5c10">More...</a><br /></td></tr>
-<tr class="separator:aac7ac5fe93429cfa45676d2dc6af5c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a225bbc386ec518ae21bd5536f21db45d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a225bbc386ec518ae21bd5536f21db45d">spdk_nvme_probe</a> (const struct <a class="el" href="structspdk__nvme__transport__id.html">spdk_nvme_transport_id</a> *trid, void *cb_ctx, <a class="el" href="nvme_8h.html#a95f40d5179f8424b466a30ba0610ab4c">spdk_nvme_probe_cb</a> probe_cb, <a class="el" href="nvme_8h.html#ac1eaa795f075495337b270667661ce5d">spdk_nvme_attach_cb</a> attach_cb, <a class="el" href="nvme_8h.html#a05f1aa545be57a03bb2dd0c6180172b6">spdk_nvme_remove_cb</a> remove_cb)</td></tr>
+<tr class="memdesc:a225bbc386ec518ae21bd5536f21db45d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate the bus indicated by the transport ID and attach the userspace NVMe driver to each device found if desired.  <a href="#a225bbc386ec518ae21bd5536f21db45d">More...</a><br /></td></tr>
+<tr class="separator:a225bbc386ec518ae21bd5536f21db45d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b63c225c3cce6da60fdbfb6f54b11e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#a4b63c225c3cce6da60fdbfb6f54b11e2">spdk_nvme_detach</a> (struct spdk_nvme_ctrlr *ctrlr)</td></tr>
-<tr class="memdesc:a4b63c225c3cce6da60fdbfb6f54b11e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaches specified device returned by <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10">spdk_nvme_probe()</a>'s attach_cb from the NVMe driver.  <a href="#a4b63c225c3cce6da60fdbfb6f54b11e2">More...</a><br /></td></tr>
+<tr class="memdesc:a4b63c225c3cce6da60fdbfb6f54b11e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaches specified device returned by <a class="el" href="nvme_8h.html#a225bbc386ec518ae21bd5536f21db45d">spdk_nvme_probe()</a>'s attach_cb from the NVMe driver.  <a href="#a4b63c225c3cce6da60fdbfb6f54b11e2">More...</a><br /></td></tr>
 <tr class="separator:a4b63c225c3cce6da60fdbfb6f54b11e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae13ccd2ea831842a5008eb95a32545c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_8h.html#ae13ccd2ea831842a5008eb95a32545c3">spdk_nvme_ctrlr_reset</a> (struct spdk_nvme_ctrlr *ctrlr)</td></tr>
 <tr class="memdesc:ae13ccd2ea831842a5008eb95a32545c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a full hardware reset of the NVMe controller.  <a href="#ae13ccd2ea831842a5008eb95a32545c3">More...</a><br /></td></tr>
@@ -334,7 +331,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
       </table>
 </div><div class="memdoc">
 
-<p>Callback for <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10" title="Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if des...">spdk_nvme_probe()</a> to report a device that has been attached to the userspace NVMe driver. </p>
+<p>Callback for <a class="el" href="nvme_8h.html#a225bbc386ec518ae21bd5536f21db45d" title="Enumerate the bus indicated by the transport ID and attach the userspace NVMe driver to each device f...">spdk_nvme_probe()</a> to report a device that has been attached to the userspace NVMe driver. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">opts</td><td>NVMe controller initialization options that were actually used. Options may differ from the requested options from the probe call depending on what the controller supports. </td></tr>
@@ -373,7 +370,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
       </table>
 </div><div class="memdoc">
 
-<p>Callback for <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10" title="Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if des...">spdk_nvme_probe()</a> enumeration. </p>
+<p>Callback for <a class="el" href="nvme_8h.html#a225bbc386ec518ae21bd5536f21db45d" title="Enumerate the bus indicated by the transport ID and attach the userspace NVMe driver to each device f...">spdk_nvme_probe()</a> enumeration. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">opts</td><td>NVMe controller initialization options. This structure will be populated with the default values on entry, and the user callback may update any options to request a different value. The controller may not support all requested parameters, so the final values will be provided during the attach callback. </td></tr>
@@ -396,7 +393,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
       </table>
 </div><div class="memdoc">
 
-<p>Callback for <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10" title="Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if des...">spdk_nvme_probe()</a> to report that a device attached to the userspace NVMe driver has been removed from the system. </p>
+<p>Callback for <a class="el" href="nvme_8h.html#a225bbc386ec518ae21bd5536f21db45d" title="Enumerate the bus indicated by the transport ID and attach the userspace NVMe driver to each device f...">spdk_nvme_probe()</a> to report that a device attached to the userspace NVMe driver has been removed from the system. </p>
 <p>The controller will remain in a failed state (any new I/O submitted will fail).</p>
 <p>The controller must be detached from the userspace driver by calling <a class="el" href="nvme_8h.html#a4b63c225c3cce6da60fdbfb6f54b11e2" title="Detaches specified device returned by spdk_nvme_probe()&#39;s attach_cb from the NVMe driver...">spdk_nvme_detach()</a> once the controller is no longer in use. It is up to the library user to ensure that no other threads are using the controller before calling <a class="el" href="nvme_8h.html#a4b63c225c3cce6da60fdbfb6f54b11e2" title="Detaches specified device returned by spdk_nvme_probe()&#39;s attach_cb from the NVMe driver...">spdk_nvme_detach()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1424,67 +1421,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
       </table>
 </div><div class="memdoc">
 
-<p>Detaches specified device returned by <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10">spdk_nvme_probe()</a>'s attach_cb from the NVMe driver. </p>
+<p>Detaches specified device returned by <a class="el" href="nvme_8h.html#a225bbc386ec518ae21bd5536f21db45d">spdk_nvme_probe()</a>'s attach_cb from the NVMe driver. </p>
 <p>On success, the spdk_nvme_ctrlr handle is no longer valid.</p>
 <p>This function should be called from a single thread while no other threads are actively using the NVMe device. </p>
-
-</div>
-</div>
-<a id="a2fd0941c7f681db753382131f85d8f91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fd0941c7f681db753382131f85d8f91">&sect;&nbsp;</a></span>spdk_nvme_discover()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int spdk_nvme_discover </td>
-          <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structspdk__nvme__transport__id.html">spdk_nvme_transport_id</a> *&#160;</td>
-          <td class="paramname"><em>trid</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>cb_ctx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="nvme_8h.html#a95f40d5179f8424b466a30ba0610ab4c">spdk_nvme_probe_cb</a>&#160;</td>
-          <td class="paramname"><em>probe_cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="nvme_8h.html#ac1eaa795f075495337b270667661ce5d">spdk_nvme_attach_cb</a>&#160;</td>
-          <td class="paramname"><em>attach_cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="nvme_8h.html#a05f1aa545be57a03bb2dd0c6180172b6">spdk_nvme_remove_cb</a>&#160;</td>
-          <td class="paramname"><em>remove_cb</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Perform a device discovery using the discovery service specified by trid. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">trid</td><td>The address of the discovery service on which to perform the discovery. </td></tr>
-    <tr><td class="paramname">cb_ctx</td><td>Opaque value which will be passed back in cb_ctx parameter of the callbacks. </td></tr>
-    <tr><td class="paramname">probe_cb</td><td>will be called once per NVMe device found in the system. </td></tr>
-    <tr><td class="paramname">attach_cb</td><td>will be called for devices for which probe_cb returned true once that NVMe controller has been attached to the userspace driver. </td></tr>
-    <tr><td class="paramname">remove_cb</td><td>will be called for devices that were attached in a previous <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10" title="Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if des...">spdk_nvme_probe()</a> call but are no longer attached to the system. Optional; specify NULL if removal notices are not desired. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -2775,8 +2714,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
 
 </div>
 </div>
-<a id="aac7ac5fe93429cfa45676d2dc6af5c10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac7ac5fe93429cfa45676d2dc6af5c10">&sect;&nbsp;</a></span>spdk_nvme_probe()</h2>
+<a id="a225bbc386ec518ae21bd5536f21db45d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a225bbc386ec518ae21bd5536f21db45d">&sect;&nbsp;</a></span>spdk_nvme_probe()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2784,6 +2723,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
         <tr>
           <td class="memname">int spdk_nvme_probe </td>
           <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structspdk__nvme__transport__id.html">spdk_nvme_transport_id</a> *&#160;</td>
+          <td class="paramname"><em>trid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>cb_ctx</em>, </td>
         </tr>
@@ -2813,13 +2758,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nvme_
       </table>
 </div><div class="memdoc">
 
-<p>Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if desired. </p>
+<p>Enumerate the bus indicated by the transport ID and attach the userspace NVMe driver to each device found if desired. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">trid</td><td>The transport ID indicating which bus to enumerate. If the trtype is PCIe or trid is NULL, this will scan the local PCIe bus. If the trtype is RDMA, the traddr and trsvcid must point at the location of an NVMe-oF discovery service. </td></tr>
     <tr><td class="paramname">cb_ctx</td><td>Opaque value which will be passed back in cb_ctx parameter of the callbacks. </td></tr>
     <tr><td class="paramname">probe_cb</td><td>will be called once per NVMe device found in the system. </td></tr>
     <tr><td class="paramname">attach_cb</td><td>will be called for devices for which probe_cb returned true once that NVMe controller has been attached to the userspace driver. </td></tr>
-    <tr><td class="paramname">remove_cb</td><td>will be called for devices that were attached in a previous <a class="el" href="nvme_8h.html#aac7ac5fe93429cfa45676d2dc6af5c10" title="Enumerate the NVMe devices attached to the system and attach the userspace NVMe driver to them if des...">spdk_nvme_probe()</a> call but are no longer attached to the system. Optional; specify NULL if removal notices are not desired.</td></tr>
+    <tr><td class="paramname">remove_cb</td><td>will be called for devices that were attached in a previous <a class="el" href="nvme_8h.html#a225bbc386ec518ae21bd5536f21db45d" title="Enumerate the bus indicated by the transport ID and attach the userspace NVMe driver to each device f...">spdk_nvme_probe()</a> call but are no longer attached to the system. Optional; specify NULL if removal notices are not desired.</td></tr>
   </table>
   </dd>
 </dl>
